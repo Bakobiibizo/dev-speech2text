@@ -1,0 +1,825 @@
+(speaker ?) you just like tell me what you envision everything looking like what like what do you want have as like your end results like what is your ideal
+(speaker ?) like if you can, if you can draw it out or like big ones really good, like using for example, or I'm just going to show up on my screen with you because that works for a little bit easier, cool so so like right now when you want to deploy an agent.
+(speaker ?) Yeah, yeah I'm taking a look at this.
+(speaker ?) So, what I'm thinking is I could probably have like another subheading below this one where it's like maybe called framework framework, agent framework, and then you have a, like a drop down on there where someone can select the framework and, and like one of those options
+(speaker ?) could be elisa. So, so then you just press launch launch agent and then not only does it deploy your token on base, but it could also deploy, deploy the agent using the elisa framework.
+(speaker ?) However, it requires centralized service. Yeah, I was going to say where does that live user right now. Yeah, because you need.
+(speaker ?) Are you familiar with virtuals. No, I'm not that.
+(speaker ?) Virtuals, but I know it's not a massive success story, and I'd say like this is probably closest.
+(speaker ?) The closest competitor to what base agent like in divisions to be.
+(speaker ?) This has, you know, launched a few months ago, it's now maybe like 1.8 billion market cap.
+(speaker ?) It's literally growing that fast. And it's deployed on on base, but so this, this thing, like they take us also 1% fee on on a token trades, and they use these fees basically to cover like the run their own gas right.
+(speaker ?) The hosting costs of the agent, but I understand.
+(speaker ?) So I think like maybe we could do something similar.
+(speaker ?) It is my chain.
+(speaker ?) We could use your chain to run it.
+(speaker ?) Well, basically, where you'd store the agent would be on that chain.
+(speaker ?) So then you'd have like each agent, because I'm planning on having the agents have like their own base that they can like stuff on the chain like it's going to cost money to register an agent on this.
+(speaker ?) And then it costs money to access memories, and then they can stake memories to be able to get money and stuff so that they have like gas that they can be able to like the sort of their transactions.
+(speaker ?) So the human has to put up the initial capital to be able to get that working, and that gives them like a dedicated space that is like dares, and then you can, you basically just store the data that you have in this.
+(speaker ?) Or whatever the ELISA framework produces in terms of like this is your agent that all that information can be stored in vectors directly onto the chain.
+(speaker ?) And then that way you can access it from like a third party terminal, like you just like, I guess you could build it.
+(speaker ?) We can build the UI for it, but like basically would just like send a command RPC command to the chain to say, hey, I want to use my agent to do this and then it will make the agent execute the commands from the chain.
+(speaker ?) By using the agent that's the information that stored on the agent.
+(speaker ?) And basically, and would have like a palette, which is like a module that's like attached to it that would allow it to run the agent framework on a dedicated machine that would be able to have it execute.
+(speaker ?) It's sort of like a sort of like the virtual machine on Ethereum, but like running agents.
+(speaker ?) Is that is that removing the need for a centralized server to operate? Yeah, it's de-centralizing it instead.
+(speaker ?) So it's similar to using something like a cache.
+(speaker ?) Yeah, sort of it's more it's more like a fancy vector store.
+(speaker ?) It's storing embeddings, not just like tabular data like a cache.
+(speaker ?) So, yeah.
+(speaker ?) Because is it ready?
+(speaker ?) Well, no, it's not ready.
+(speaker ?) I'm going to build.
+(speaker ?) This is why I'm doing this implementation is because I need to demo and this.
+(speaker ?) Okay.
+(speaker ?) So how, I mean, just give me a timeline like how far away do you think you are?
+(speaker ?) I think I put it two weeks on it.
+(speaker ?) So not like super, how fast do you want to move this question?
+(speaker ?) Okay.
+(speaker ?) You know, as quickly as possible, I think.
+(speaker ?) Yeah.
+(speaker ?) Yeah, because I'm currently, I just, I just hired a developer, but I'm still putting together this contract.
+(speaker ?) So I don't have them work yet.
+(speaker ?) I do have the embedding already done for the chain.
+(speaker ?) So like the proof of concept works, but like it's still, I need to build the interface.
+(speaker ?) And then, yeah, so.
+(speaker ?) Yeah, I still have two to three weeks I've put on here. I could accelerate it bobbly by a week, but the new guy guys, I have to still.
+(speaker ?) Yeah, still two weeks is probably the earliest that we would.
+(speaker ?) That we could always just have that as like a long term goal and.
+(speaker ?) For now that like, and just bear, build it with that in mind.
+(speaker ?) Yeah.
+(speaker ?) Yeah, I think that would make sense.
+(speaker ?) Just tell me, like, from your perspective, what, what you believe would make sense of a user journey here, though.
+(speaker ?) Like what I don't understand is like what.
+(speaker ?) So like the framework effectively with the framework is doing is what this UI is doing is like it provides.
+(speaker ?) Like a way to input data.
+(speaker ?) You like, I guess they use like markdown documents, but like basically to input data that gives it its prompts for persona and for different actions.
+(speaker ?) The actual, and then, and then executes it, I suppose.
+(speaker ?) So like that would be the only thing is that it would.
+(speaker ?) It would add the ability to execute it, but that needs to be run on the machine.
+(speaker ?) Like that either the user has to have that on their machine already ready to go.
+(speaker ?) It could provide like a package that allows them to download it and then install it and then run it like that.
+(speaker ?) That that's a lot of work in terms of making sure.
+(speaker ?) Or is compatible with like Windows, the crap.
+(speaker ?) And then the other option I can think of is that it effectively.
+(speaker ?) Just like formats the agent so that it works with the framework and then just gives you the file that you can.
+(speaker ?) But I'm not sure or you have like a centralized server that runs them for you.
+(speaker ?) And then that would require like some kind of a UI that would allow user to execute commands and like see the status of their agent.
+(speaker ?) So imagine, I want to create like a define trading agent, but I fill in all the details here.
+(speaker ?) I select the laser, click, click, deploy.
+(speaker ?) The agent's got a token, it's now tradable.
+(speaker ?) And then the next thing I want to go to as the agent dev is like the place where I'm going to basically like probably configure and configure and optimize the agent.
+(speaker ?) So if you look at.
+(speaker ?) Have you look at Olaf?
+(speaker ?) Yeah, I've looked at it.
+(speaker ?) It's like fucking crazy complicated, but like.
+(speaker ?) Yeah, I went through the Academy. It's fucking a nightmare, but.
+(speaker ?) I think I read the white paper about three times in this book.
+(speaker ?) I feel like it just probably got but to find it live.
+(speaker ?) But it was very, very difficult to get my head around.
+(speaker ?) They're very thorough, but it's like very technical.
+(speaker ?) But like this is, yeah, I mean, so imagine I'm wanting to like configure my agent.
+(speaker ?) You know, this is so I might want to be able to like go to the character file, like make tweaks to that, or.
+(speaker ?) Yeah, I'm talking like that.
+(speaker ?) Those Jason objects, one of the brackets, those are the, those are the fun.
+(speaker ?) I'd have the.
+(speaker ?) Into the.
+(speaker ?) Like eternal character.
+(speaker ?) Right, right, exactly. Yeah, yeah, that's the information. So like that would be basically what this.
+(speaker ?) Your site would probably format it in that way and then spit out that would probably be the easiest implement.
+(speaker ?) So that you put in the information and then it gives you that, then you just are supposed to put that into the repo and then run the repo.
+(speaker ?) For now, until we have like a UI for it.
+(speaker ?) But couldn't it just be like, on, on, on, on GitHub. So like after I deploy the agent, maybe you've got like a default, you know, character that Jason file.
+(speaker ?) And then if somebody wanted to.
+(speaker ?) When the agent then wants to edit that, they just edit.
+(speaker ?) And then.
+(speaker ?) So like it depends on what you're talking about, like, how are the agents in base agents?
+(speaker ?) Like a smart contract, like entirely, like kept on chain, or do you guys have like a repo like this that you run commands with, like have a CLI or something.
+(speaker ?) We don't have any of that. So when you think of base agents, we just think of the, we're very implemented the token, the token part, nothing with regard to the actual agent functionality or agent wallets, or nothing like that.
+(speaker ?) Right. It's just like a token interface. Yeah. Yeah. Okay. That's just like the token portion of it. Then this is like the framework of like.
+(speaker ?) Yeah. So you can think of this as sort of like a.
+(speaker ?) I mean, it's a finite state machine effectively, but it's, it's, it's a series of states that it could be in. It's like, if it like has received a transaction or like is processing one or finished.
+(speaker ?) Those are all different states. And then it has like a prompt that tells it what to do during those particular states.
+(speaker ?) So their implementation is way more like conversational. So it's more like, yeah, this is the agent Bob and he's going to have talked to you about coding and teach you how to do coding or whatever.
+(speaker ?) And if you ask it a question, it talk is it.
+(speaker ?) But your implementation is more like programmatic where like if there's somebody needs to perform a transaction on the token or it needs to form a trade or something like that, then you need to have.
+(speaker ?) What's the instructions for? Am I understanding that correctly?
+(speaker ?) Not really. Okay. So, so if somebody wanted to make a trade on a specific agent, then I mean, sure they could interact with the smart contract directly, but they could also just use this interface and then they, you know, select the token and.
+(speaker ?) Just like pumped up fun, they can choose to buy and buy and sell it from the bonding curve and then after specific amount of eat is raised, the liquidity automatically transitions to uniswap D three.
+(speaker ?) Okay, so then this is just straight, straight token. Okay, that makes sense. This is just this is just a circuit.
+(speaker ?) But what what is your end goal with the base agent so like I can, like what like once you have like your framework in place and like how they have agents that are you're going to run where do you want, what do you want them to do where you want to run?
+(speaker ?) How do they work?
+(speaker ?) Yeah, so the thing I really love to get set up is an agent that basically deploys other agents.
+(speaker ?) So imagine you've got an agent that kind of scans.
+(speaker ?) Scans the like top market cap companies out there one by one and assess evaluates them for whether or not it's feasible to be replaced entirely by agents.
+(speaker ?) So like take take like your, I guess my thesis is virtually all SAS businesses are going to get replaced by by agents.
+(speaker ?) Yeah, that's the thing.
+(speaker ?) So imagine in this agent, it's like scanning scanning through top market cap companies, maybe pulling in data from.
+(speaker ?) Yeah, finance or crunch base or whatever, but it's basically like going through these companies and then it finds a target as that cool.
+(speaker ?) This we think this this company.
+(speaker ?) It's the quiet area for being replaced entirely by agents so they're basically going to attack it.
+(speaker ?) Look, it's a bit like a 16 Z, you know the seat they see you see a 16 Z the like we can we can do this through agents and they created a 16 Z.
+(speaker ?) So another one might see like a social network like Twitter and we like cool.
+(speaker ?) This can be replaced entirely by virtual agents.
+(speaker ?) We're going to we're going to attack it.
+(speaker ?) And it automatically deploys like a series of agents that it thinks it needs to do that and it might and it might be like you want like an organization agent that like will deploy agents with different.
+(speaker ?) So, okay, so from what I understand, like, you know, it's already that maybe there's already like a software developer agent that's like really, really good.
+(speaker ?) So it doesn't need to deploy a new software agent. It can just basically hire an existing software agent that's on on based agents.
+(speaker ?) And another case is might it might need to like deploy a brand new agent, but I want it to be done very much like in line with with with Twitter.
+(speaker ?) As a growth marketing tactic, you know, when when this agent deploy identifies a new target company that it wants to basically bring down and replace three agents.
+(speaker ?) That whole journey is like actively communicated on Twitter.
+(speaker ?) Okay, so then you use the momentum from Twitter to be able to like help.
+(speaker ?) And like, you know, you tagged the company like that you're going to bring down and basically.
+(speaker ?) Fair warning, employees, everyone can like can see, you know, the momentum is building up and see like the show, if you want like entertainment show of agents bringing down a behemoth.
+(speaker ?) That's interesting. Okay, so that's a little bit the vision.
+(speaker ?) And so part of me thinks like, okay, to do this, you don't necessarily even need to rely on other people to like come to this launch page and fill out the information launched launch nation, it could be entirely programmatic.
+(speaker ?) Yeah, you can have like a central agent that just like determines what. So you need like, need a couple different things for that. You need a basically skills library. So, like, different.
+(speaker ?) A pooling for agents that allow them to be able to like run inference, generate images, post to Twitter, whatever.
+(speaker ?) Whatever things that you need done to be accomplished.
+(speaker ?) Then you need some kind of a like state manager that act functions as the agent itself. That's like, basically a series of steps of like this, you're, if this happens to you, do that.
+(speaker ?) And that basically covers all the different possible parameters of what the agents are going to do. And then that's what that's what informs the agent able to execute with the tooling that it's been provided with.
+(speaker ?) To be able to accomplish whatever. And then you need like a centralized or registration agent that like manages at all, and like overseas everything.
+(speaker ?) And besides like what agents go there and what.
+(speaker ?) Yeah.
+(speaker ?) So.
+(speaker ?) And there's something that I saw.
+(speaker ?) But I 16 z had released last week and try and find it.
+(speaker ?) I need a framework that's more of a bust on it.
+(speaker ?) So they're basically like track, like allowing people to make permits, and then using using AI to like pay a score.
+(speaker ?) Right. So the, to the base on the commit. Oh, how good the commit is. Yeah.
+(speaker ?) Yeah. Yeah. And I like the idea of implementing, implementing this like with, with the other agents because you want to make sure that they're not putting crap on the putting crap into the system.
+(speaker ?) Like get in and out, right.
+(speaker ?) Well, that, that, but also just like financially rewarding people to, to like help the agent get more or less describing my blocking.
+(speaker ?) Also, whether it provide any data sets or, you know, helping the agent get like on stock on some, on some coding issue.
+(speaker ?) I don't want to like, I don't want to completely alienate humans from this.
+(speaker ?) Yeah. But what you do is create a secondary marketplace where the people can bet on the agent.
+(speaker ?) Because then then they, then they can like stake the agents, it gives your agents underlying value. And then they can speculate on them.
+(speaker ?) And if they're, if the agent doesn't call their role.
+(speaker ?) But that's kind of what you have already. Like if you, if you think this agent is going to be super well, and you just want to take a punt on it.
+(speaker ?) Yeah, well, but you have the token implementation of it. You don't have the agent, but.
+(speaker ?) Right. Yeah. But I mean, assuming that you had like at least running on the back end. Yeah, yeah.
+(speaker ?) And you thought that this dope, Pepe thing was going to do super well and like has a high probability of success to have like taken down some, whatever company they're trying to replace.
+(speaker ?) Yeah, yeah, yeah, yeah, that makes sense. And then you're basically like, yeah, so that is so you've already implemented the marketplace, the secondary marketplace.
+(speaker ?) You know, yeah, so you're just basically looking for like a robust agent framework. There is another library that look at.
+(speaker ?) I have looked at other jam, look to crew AI.
+(speaker ?) These guys you probably haven't seen.
+(speaker ?) These are a couple of AI researchers that I've worked with.
+(speaker ?) Quite extensively.
+(speaker ?) They have a fairly robust framework that allows them to be able to.
+(speaker ?) Very programmatically and like systematically break down large complex tasks, be able to perform like chain actions.
+(speaker ?) Like this was there. They were working on consulting. We basically.
+(speaker ?) They did like an agent that like does calls and like replacing sales reps for like a really big insurance company and stuff.
+(speaker ?) So like it works.
+(speaker ?) And it like, it will do more complex things than the AIs 16.
+(speaker ?) The AI 61 is like more conversational right now.
+(speaker ?) You need to do quite a bit of work in helping like the state management system or.
+(speaker ?) Implementing the token portion.
+(speaker ?) Which is basically like the whole point of it. So I mean, I guess you still have to do with agent forage as well. So it's more like what.
+(speaker ?) I don't know. Take a look at it. See if it's all if it's not, then whatever.
+(speaker ?) Yeah, I mean, I have come across this before.
+(speaker ?) Yeah, I haven't actually tried to.
+(speaker ?) I've never played around with that.
+(speaker ?) But I mean, yeah, you fail these those just kind of like more conversational.
+(speaker ?) Just as, and this is just I've only taken a really cursory look at it.
+(speaker ?) Honestly, I need to spend a couple more days like or like another day.
+(speaker ?) Just think I haven't actually had like spent a day digging into it yet. I've just been just like.
+(speaker ?) I mean, I have just have a look at like the traction in terms of like the number of plugins that are being added to it.
+(speaker ?) Oh, okay. It's it's huge. Yeah, it's be you've got you've got plugins with everything from like Skype to WhatsApp to discord. Like it's it's really.
+(speaker ?) And like various other tools that like integrate integrate out into all other.
+(speaker ?) Yeah, I'm not thinking of the community and the.
+(speaker ?) That aspect of things. You're right.
+(speaker ?) And it's got, yeah, I'm a 3.4 K stars already over 900 for.
+(speaker ?) So I just think like there's there's a lot of momentum behind this right now.
+(speaker ?) And and it's probably something that we can tap into as well.
+(speaker ?) Yeah, and being able to like that's what I have the implementation for my chain is like.
+(speaker ?) Eliza is going to be one of the first agents just because I noticed it was popular.
+(speaker ?) I got into conversations with all the develop like the people that are running it and stuff through my friend Yikes.
+(speaker ?) Okay, knows everybody in goddamn crypto space.
+(speaker ?) But yeah, so like yeah, I see I see the value.
+(speaker ?) We can do things like they've got this page basically.
+(speaker ?) I continue the URL after that it's you can you can donate tokens to the.
+(speaker ?) The AI 16 Z dial and basically like in return for that.
+(speaker ?) You kind of like get the official support.
+(speaker ?) Okay, so I think that would be like a smart partnership move.
+(speaker ?) With these guys, but we want to we want to do like a billion, a billion tokens for the governance token of the base agents, which will be called bag.
+(speaker ?) Are you guys are you guys like working with Coinbase? Are you just operating in?
+(speaker ?) Yeah, just independently.
+(speaker ?) Okay, I mean we are in touch with some people from.
+(speaker ?) The Coinbase developer platform, because they released an agent kit.
+(speaker ?) Yeah, I heard about their thing and I was wondering if it was the same thing or related or what.
+(speaker ?) Yeah, I know kind of like a special partnership.
+(speaker ?) And so yeah, I mean, I kind of think maybe it makes sense to just like set up a laser on like a set or one of our devs already deployed it on a centralized.
+(speaker ?) So last last week.
+(speaker ?) What kind of hardware you got.
+(speaker ?) So some heads that live.
+(speaker ?) That like a provider for.
+(speaker ?) Yeah.
+(speaker ?) Yeah, yeah.
+(speaker ?) Are you guys running with it with a GPU or just like running it on a base server or.
+(speaker ?) I'm not sure.
+(speaker ?) I'm not sure. I'm just curious just because I run, I have my own servers that I run inference off of.
+(speaker ?) So like if if you let me on that server, I might be able to like get things going for you.
+(speaker ?) I was just wondering if I would be able to use a direct.
+(speaker ?) I just have to use my.
+(speaker ?) It's like basically just don't like paying an opening, so I just run all my own models.
+(speaker ?) Okay.
+(speaker ?) Yeah, well, I guess you don't have to use.
+(speaker ?) Open AI with.
+(speaker ?) Which is great.
+(speaker ?) Yeah, I know you.
+(speaker ?) It has flexibility.
+(speaker ?) Have you tried the.
+(speaker ?) Open AI pro.
+(speaker ?) No, I just heard about it this morning and I haven't had a chance to go take a look at it.
+(speaker ?) Also, I don't want to pay the 200 bucks necessarily.
+(speaker ?) I probably will, but like I know I'm damn.
+(speaker ?) Like you got a better be good and like.
+(speaker ?) Yeah.
+(speaker ?) Yeah.
+(speaker ?) I mean, if I think about the amount of time that I spent chatting with it.
+(speaker ?) You know, I mean, it's probably probably like pays off by everything.
+(speaker ?) It kind of sets a trend now.
+(speaker ?) I'm really curious.
+(speaker ?) I don't think it's going to get more and more expensive.
+(speaker ?) Yeah.
+(speaker ?) Well, it's either one of the other like I think it's going to go in two different ways at the same time.
+(speaker ?) I think that there's good the models.
+(speaker ?) There's going to be a subset of models that are going to sacrifice like ability and like cognitive function.
+(speaker ?) Or speed.
+(speaker ?) And that'll be for like low level agents that basically just do a sync ask.
+(speaker ?) And then they're going to be.
+(speaker ?) Or expensive ones that like think that are going to like going in the expense more expensive direction.
+(speaker ?) So I think they're going to happen simultaneously.
+(speaker ?) Yeah, I agree.
+(speaker ?) But most of these agents, I guess my thesis is that all of these like agents doing services like they're all going towards zero.
+(speaker ?) Yeah.
+(speaker ?) And honestly, like if you think about it, like, I don't know, I spend when I was using the API, I easily could clear a hundred and fifty bucks, 200 bucks just on API calls.
+(speaker ?) And if they said they did say is unlimited access to that.
+(speaker ?) That in itself, I think is really.
+(speaker ?) And especially for like an implementation like this where you want it to do things with web three, which is all crap.
+(speaker ?) Yeah, it would probably.
+(speaker ?) Trying to use that model.
+(speaker ?) Yeah.
+(speaker ?) Yeah.
+(speaker ?) I'm definitely going to try it out.
+(speaker ?) But yeah, tell me like.
+(speaker ?) I guess it's for you to kind of help us like implement this on a.
+(speaker ?) In the way, I mentioned, so, you know, someone just go right to the page.
+(speaker ?) So the more you can just go here, like add the agent details, not just the agent, that spins up.
+(speaker ?) And deployment of like, like a, a, a laser on a, on a, maybe on like a set centralized setup for now.
+(speaker ?) And then when you're things ready, like.
+(speaker ?) I could do like a centralized approach using your setup that.
+(speaker ?) And, and then.
+(speaker ?) I think like what would make, make most sense, maybe would be.
+(speaker ?) That after they've deployed it, like assuming that if you made something like the GitHub.
+(speaker ?) Um, feel like.
+(speaker ?) It's like the source, the source of truth, right?
+(speaker ?) Yeah, I would just be like, it would like.
+(speaker ?) Yeah.
+(speaker ?) Add the default code for that.
+(speaker ?) That would be super easy to do because that's just, that's just actions.
+(speaker ?) Every time the GitHub gets updated, there's a file in there.
+(speaker ?) And when it's updated, it'll just execute whatever commands.
+(speaker ?) Yeah.
+(speaker ?) That's not hard to do.
+(speaker ?) Um, the full implementation is a fair amount of work.
+(speaker ?) I'm going to be doing it anyway.
+(speaker ?) I'm just trying to think about how I can.
+(speaker ?) Damn this into my subnet because I want emissions again.
+(speaker ?) They, um, my subnet was basically just creating embeddings and.
+(speaker ?) The community is effectively not really using it for anything.
+(speaker ?) So like it's not super duper useful.
+(speaker ?) Um, so.
+(speaker ?) We're not getting like a ton of votes.
+(speaker ?) Um, for the subnet and.
+(speaker ?) I need to build something cool that will allow them to.
+(speaker ?) Vote for me so I can get my emissions back.
+(speaker ?) Uh, where I need them to be able to.
+(speaker ?) Then maintain my development team.
+(speaker ?) Um, so I know that you are working with Sal and partnering.
+(speaker ?) So like if I can.
+(speaker ?) Um, implement.
+(speaker ?) It's really difficult to work with.
+(speaker ?) It's like, yeah, I get this done.
+(speaker ?) No worries.
+(speaker ?) I get it done this week and then.
+(speaker ?) Yeah, it'll disappear for like a fucking two weeks.
+(speaker ?) I come back and have like something.
+(speaker ?) I know I worked to sell a lot.
+(speaker ?) Um, so, uh, what I think makes sense and then okay.
+(speaker ?) So this actually kind of solves your problem as well.
+(speaker ?) Um, of centralized centralized, whatever.
+(speaker ?) Um, we could.
+(speaker ?) We could structure the subnet so that.
+(speaker ?) People run the agents.
+(speaker ?) As like the miners.
+(speaker ?) So they provide the rig that gives you the.
+(speaker ?) Um, compute that you need to be able to run the agents.
+(speaker ?) Um, then you would have like a validator that effectively.
+(speaker ?) Right.
+(speaker ?) This down just to try and get my head around what.
+(speaker ?) Yeah.
+(speaker ?) For sure.
+(speaker ?) So, so substrate.
+(speaker ?) This is like a whole like, it's a very commune bit tensor fucking specific thing,
+(speaker ?) but they have subnets.
+(speaker ?) And these subnets basically are like, um, uh, specialized.
+(speaker ?) Um, playing for the chain effectively with.
+(speaker ?) So like, uh, there's one that like generates art.
+(speaker ?) There's one that creates data sets.
+(speaker ?) There's one that just does inference.
+(speaker ?) So you send it, then it'll give you text back or whatever.
+(speaker ?) Um, and, uh, so the way that the blockchain works is that it gives emissions to people who provide their compute.
+(speaker ?) Be able to accomplish these goals.
+(speaker ?) But as a subnet owner, you were able to create the code that effectively people run on their machines to allow you to access their compute to be.
+(speaker ?) So you could set it up so that, um, the miners are basically providers of compute for the agents.
+(speaker ?) So when the agents need to execute and or run, then they make a request to the subnet.
+(speaker ?) It makes a request to find her.
+(speaker ?) They run the agent command or whatever the hell it's going to run.
+(speaker ?) And then it rewards the minor with emissions.
+(speaker ?) And then so they get money.
+(speaker ?) And then, but that comes from the chain automatically.
+(speaker ?) So just boots drops your whole thing. You don't have to pay for it.
+(speaker ?) So they say that, um, so we got the, the miners are the providers of compute for the agent.
+(speaker ?) Yeah.
+(speaker ?) Okay.
+(speaker ?) Um, yeah.
+(speaker ?) So let's imagine I've got my defy.
+(speaker ?) Trading trading agent.
+(speaker ?) That's doing like maybe it's doing.
+(speaker ?) Uh, kind of like snipe, uh, snipe the strategy on agent tokens.
+(speaker ?) Yeah.
+(speaker ?) Cool.
+(speaker ?) So, um.
+(speaker ?) So let's say you have a request.
+(speaker ?) This, this, this agent, this, this defy trading agent would have a specific subnet.
+(speaker ?) Is that right?
+(speaker ?) So basically how it would work, I think would make the most sense would be to have like a centralized store where the agents are kept.
+(speaker ?) Um, and so one requirement of the subnets is that there's a validator and the validator has to be this big bohemith fucking code block that like basically double checks that the miners are doing.
+(speaker ?) Um, so it's validating the work.
+(speaker ?) Um, so that you can use as a centralized store of the agents and then you can transmit the agent data to a minor and then the minor will.
+(speaker ?) All that agent and then run it.
+(speaker ?) Um, so effectively you wouldn't be able to run it like continuously all the time.
+(speaker ?) You might be able to do it, but that would be really complicated.
+(speaker ?) Um, especially in terms of like if somebody stops running an agent or off like that.
+(speaker ?) But if you do it to execute commands, then, um, it'll run the agent.
+(speaker ?) Mitten Lee, um, when something needs to get done and then, uh, it will.
+(speaker ?) Uh, effectively run that and then.
+(speaker ?) Or in compensation of running that the blockchain itself will give emissions to that minor automatically without anybody.
+(speaker ?) You don't have to pay it. It just fucking appears in there on their key.
+(speaker ?) But so let's imagine this defy trading agent. I'm going to give it a name.
+(speaker ?) Yeah, so we've got something that's called get car.
+(speaker ?) So one of the things that Gekko is doing is posting on Twitter every, every two hours on.
+(speaker ?) You know, whatever trades it's doing or has done or is thinking of doing.
+(speaker ?) Yeah.
+(speaker ?) Um, so it's explained to me like given the kind of like be continuously on.
+(speaker ?) It's probably like, even though it's posting every two hours, it's probably like collecting new data in from.
+(speaker ?) You know, coin gekko or something like continuously.
+(speaker ?) I thought it was having.
+(speaker ?) Yeah, so it depends.
+(speaker ?) Kind of think of like what the easiest way to do this.
+(speaker ?) Oh.
+(speaker ?) Well, they'll be able to run it.
+(speaker ?) It's like, you can't, it's a really, it's a hard thing to ask somebody to.
+(speaker ?) From there.
+(speaker ?) Um, like they.
+(speaker ?) Most some nets do ask that, but like everything is still intermittent.
+(speaker ?) So the problem is the problem that I foresee anyway.
+(speaker ?) Is that, um, if a specific age is running on a specific machine and something happens to that machine.
+(speaker ?) There's no like redundancy that and then building in that redundancy is very complex stuff.
+(speaker ?) Uh, but.
+(speaker ?) If you.
+(speaker ?) You could just hijack the.
+(speaker ?) Orange and on you.
+(speaker ?) That.
+(speaker ?) As like the state machine.
+(speaker ?) Just basically like put it in as the weights.
+(speaker ?) Sorry, I'm just thinking that does nothing to.
+(speaker ?) Um.
+(speaker ?) So basically the way that I see it that makes the most sense in terms of the easiest way to do it would be to have.
+(speaker ?) Agent.
+(speaker ?) Um, so like say Gekko is, um, every two hours, it needs to double check Twitter, right? So that's on a schedule. So then it basically.
+(speaker ?) Would, um, submit to the validator, which like the centralized.
+(speaker ?) Door of the agents or whatever, um, the schedule that it has of saying, Hey, I need to check Twitter every two hours with this agent.
+(speaker ?) And then so every two hours.
+(speaker ?) The validator would send a request to one of the miners.
+(speaker ?) All this agent and run the Twitter check and then it would.
+(speaker ?) Get back the results and then store that result. So then when you.
+(speaker ?) Double check it as like the human or, um, or it needs to like make the post or whatever. Um, then it can execute another command that says make that post.
+(speaker ?) Uh, and do the same thing with the miners. So you just basically do it iteratively. Um, and then just use the validator is like this.
+(speaker ?) Does that make sense?
+(speaker ?) Um, so it basically just be doing something every two hours.
+(speaker ?) They'd be like, it wouldn't, it wouldn't technically be running continuously. It would, uh, it basically you'd submit schedules to it that tells.
+(speaker ?) Um, the validator when to make requests, you could submit a schedule that says make a request every fucking second if you wanted to. Um, yeah.
+(speaker ?) Uh, I feel like there would be like a rate limit or something. Have you heard of a XBT? Oh, I haven't.
+(speaker ?) So this one. Um.
+(speaker ?) That system.
+(speaker ?) So this was a, um, put a, a Twitter agent that.
+(speaker ?) Kind of like gives you.
+(speaker ?) Financial advice, um, on on tokens. Yeah, I have a, I have a market sentiment agent that basically goes and, um, checks the market and then gives you like a sentiment analysis on like if it's good or bad based on whatever ticker you put into it.
+(speaker ?) Uh, I imagine that this does the same thing, but just posts too.
+(speaker ?) Right.
+(speaker ?) Well, something similar because you can, you can basically like, as you can see in these replies, you can, you can tag the agent.
+(speaker ?) Um, and you can ask it something.
+(speaker ?) And then I see that interaction is hard.
+(speaker ?) So, for example, like here, like you look at the time elapsed 10 minutes and within, you know, seven minutes, you basically got a response from the agent.
+(speaker ?) And this is one of the things that's kind of like made this thing go so viral.
+(speaker ?) And, and if you have to wait for like.
+(speaker ?) It's like one hour is basically for like an agent to give you a response.
+(speaker ?) Um, it's just never going to be as good. Yeah, yeah. So, so in that situation, you definitely have to have a dedicated machine that.
+(speaker ?) Um, yeah. And, and, and in that circumstance, like, I think like, then that sort of falls on the developer to be responsible for it.
+(speaker ?) Um, because trying to provide that as a surface is.
+(speaker ?) Very difficult. Yeah.
+(speaker ?) Yeah.
+(speaker ?) And it's, I don't think most people, most people are like, that's what I'm going to do with my chain for the most part. Like, they're, they're going to have states that are stored on block, but like.
+(speaker ?) The actual, like agent, like the inference that's running and stuff like that is going to be all off chain. So, yeah.
+(speaker ?) And that's like on the phone.
+(speaker ?) Um, some, some activities that we're probably going to want to have.
+(speaker ?) Yeah, on chain and some, some ones are going to need to be off chain.
+(speaker ?) Yeah, does base have anything similar to like subnets and like, um, like polka dot, I'm really very used to up straight. So like polka dot is like the basic parent chain of all these chains.
+(speaker ?) Um, so they have like subnets with validators where you can mine and most of its proof of stake. Um, what kind of system do they have any similar, like how do they keep their ledger on base. I'm not familiar.
+(speaker ?) No, I know. Okay.
+(speaker ?) I'll take a look at it. I just was figuring you might know off the top of your head.
+(speaker ?) Because if they have something similar, they probably have some kind of like, um, like a build a subnet, like grant program or something and then you then you would be able to try to provide the service that, but you'd have to like get approved for.
+(speaker ?) Come through a month.
+(speaker ?) Um, but you can use commune.
+(speaker ?) Happy to provide with the subnet, but I don't think we, I think we could only do like, like have like a schedule that we like periodically use. I don't know if we could actually just like run everybody's.
+(speaker ?) Every Yahoo.
+(speaker ?) Running it. I mean, commune missions are getting.
+(speaker ?) On the end, so that's fine.
+(speaker ?) So the mission probably will still run it. I don't know. It's probably doable.
+(speaker ?) Really think about it, but, um, yeah.
+(speaker ?) It's just a little bit more complex in terms of like running the implementation of the agent as like a generic thing that people can just like download as a minor, like, because you got to be able to have like a central repo that everyone just copies and then you have to load the agent.
+(speaker ?) Um, like that would require me to build the entire framework in some net, but a bit of work.
+(speaker ?) I'm not like, give me a day to think about this. I think I just need to like.
+(speaker ?) All over the different possibilities, like I can feel it in the back of my head.
+(speaker ?) I almost have like an idea of like how to build this properly, but like.
+(speaker ?) I need to just like sit there. So this is what I would suggest.
+(speaker ?) So right now we're just like a centralized.
+(speaker ?) A centralized setup. So you have like a.
+(speaker ?) I guess in order it would be number one, you've got this agent, the player.
+(speaker ?) The agent, the player, um, evaluates the target opportunities.
+(speaker ?) Target being like company to take down.
+(speaker ?) But after that, then, um, deploys, um, multiple agents to, um, kind of a replicate or like copy.
+(speaker ?) Um, that company.
+(speaker ?) Um, deploys parent agent, like with, with token on, on base agents.
+(speaker ?) So that, that, that then allows people to immediately invest.
+(speaker ?) Yeah, so that's like, um, that's more like, I think that, I think of that as like more of like.
+(speaker ?) So it uses the, um, the EVM plugin from, um, uh, Elisa.
+(speaker ?) Yeah, you'll have to just modify that.
+(speaker ?) And, and then deploys multiple agents.
+(speaker ?) Uh, to replicate copy that company may or may not have on token.
+(speaker ?) Um, ideally would be great for the agent, agent, the player to determine whether or not a specific.
+(speaker ?) Like subchild or child agent, um, should have a token on that.
+(speaker ?) Um, and, and then.
+(speaker ?) Um,
+(speaker ?) and then gradually like decide what, what agent actions to put on chain rather than off chain.
+(speaker ?) Um, what's the name of your subnet?
+(speaker ?) Uh, is a gun. Eden. Eden.
+(speaker ?) And then, and so, because, because this is, um, like, basically like a sent, a centralized setup.
+(speaker ?) Um, we don't need to worry too much about.
+(speaker ?) Yeah, the implementation, how, how we would allow like other people to easily access the agent files or like add new databases, centralized databases, et cetera, to the agent's memory.
+(speaker ?) Um, it's all, it's all centralized.
+(speaker ?) I think ideally if we develop the centralized service in like a Docker container.
+(speaker ?) Um, that deploys other Docker containers that have things like your databases and stuff, then you can have it as like a package that you.
+(speaker ?) Um, like build an installer. And that way people can run the agent.
+(speaker ?) Yeah.
+(speaker ?) Is it available as a doctor? Oh, no, no, no, not at all. We'd have to put it in one, which is not like Docker containerizing stuff is released.
+(speaker ?) Um, it's more just making sure that we're building like with that in mind.
+(speaker ?) Uh, modifying it is not like super hard, just because it's like a text script is like basically like built to.
+(speaker ?) Well, I guess everything is technically, but it's, it's really not.
+(speaker ?) There's a lot of good tooling that allows it.
+(speaker ?) Um, be easy.
+(speaker ?) So surely like someone from within the community is already looking.
+(speaker ?) I imagine with as much community action that's going on about you.
+(speaker ?) Cause, um, I don't know if you want to deploy something on a cache, you also need to be a doctor container.
+(speaker ?) Yeah.
+(speaker ?) I think that's a really nice business model here as well as like just allowing someone to like access.
+(speaker ?) Yeah, they already have a Docker, Docker instance of it.
+(speaker ?) Yeah.
+(speaker ?) That's what you shouldn't be running, um, in terms of like testing it, or like getting like, uh, well, I guess you were deployed it, but.
+(speaker ?) Cause if like everything is a container, that makes everything way easier, like a one command.
+(speaker ?) It does everything it needs to, and then people don't have to think about it.
+(speaker ?) Um, yeah.
+(speaker ?) And then if like your, your page basically like takes the information, create the agent file that it needs, but it inside the correct place inside of the repo.
+(speaker ?) Inside of the repo inside of the container and then launches the computer for the user.
+(speaker ?) Oh, Bob's your uncle.
+(speaker ?) And you don't have to worry about the distributed compute centralizing your servers.
+(speaker ?) They can just audit themselves and we can get it working as a demo just on, on whatever mission.
+(speaker ?) Does that make sense?
+(speaker ?) So like do this first and then later let others deploy that own.
+(speaker ?) Yeah.
+(speaker ?) Uh, agent using a laser through a doctorized container. Yeah.
+(speaker ?) That's effectively. Yeah, exactly.
+(speaker ?) Which, which, but where would the doctorize container run like they decide or.
+(speaker ?) Yeah, they run it on their machines, but they have the option of being on it.
+(speaker ?) So if you want to provide the centralized service, then you can, and I would probably limit it and like have like some.
+(speaker ?) Like, like staking amount or something to like financially.
+(speaker ?) Like, um.
+(speaker ?) Basically, so you don't get like, um, like, de-dossed.
+(speaker ?) It'll attack.
+(speaker ?) Mm hmm.
+(speaker ?) Yeah, it has to cost something otherwise people will just do it.
+(speaker ?) And use up all your.
+(speaker ?) How do you think something like the AI XBT projectors is handling that given that you've probably got a loaded bot.
+(speaker ?) They have a dedicated server that just runs it does nothing else.
+(speaker ?) But like they have like a Google cloud or like, um, an AWS service or something or they're using.
+(speaker ?) Um, like a droplet or something like that.
+(speaker ?) Basically, they have a dedicated server that's running it in a loop continuous.
+(speaker ?) And so it monitors the API on the back end of X.
+(speaker ?) And then when somebody makes like at it, then it will have like a pre programs.
+(speaker ?) Like, okay, you've been at it. Now you have to form these steps.
+(speaker ?) So whatever respond to the post, check up, whatever you need to check up.
+(speaker ?) It basically has like a set of like.
+(speaker ?) If you find yourself in this situation, then do this. It has as many of those commands as it possibly can think of in order to cover all possibilities.
+(speaker ?) And it.
+(speaker ?) But I mean, the kind of like what you described as like the cyber attacks on just, um, oh, for that, um, they don't.
+(speaker ?) They're not providing it as like you can't get like you.
+(speaker ?) They have their own dedicated server that nobody else can go on, but there's no outside interactions.
+(speaker ?) Like the, the, the, you can only interact with this thing through Twitter, right? Like you're not there.
+(speaker ?) You don't touch it server. Nothing like as far as you're aware, like it is like, it could be another person who's just personating.
+(speaker ?) Um, so like the attacks.
+(speaker ?) There's no attack vector there, but like if you have like a website that is providing like agents as a service where they, they can run on your compute, then that opens up that attack vector, which is where I worry.
+(speaker ?) Yeah, I got that. I think you more just like every time this thing responds to someone, it's, it has a cost associated with it. Yeah, yeah. So for that, they just need it.
+(speaker ?) Yeah.
+(speaker ?) Like, and I mean, like if you wanted to, you probably could like get bots, like a, like a DDoS swarm of bots and like.
+(speaker ?) Like at that thing, like a hundred thousand times or something like that. And it probably would fuck it off.
+(speaker ?) But it might have, it probably has a rate limiter. So like, it'll just be like, okay, there's way too many. Actually, X would do it because X wouldn't let you make that many.
+(speaker ?) Yeah. Yeah, that's definitely a rate limit on that side. I guess they're probably on the enterprise.
+(speaker ?) Yeah.
+(speaker ?) Um, plan at this point.
+(speaker ?) Is there a use of that?
+(speaker ?) Um,
+(speaker ?) So let me just think this thing is through. So you've got this agent, the fire.
+(speaker ?) Um, yeah, so I see this is really where it's kind of like bootstrapping the,
+(speaker ?) um, the agents in the, in the marketplace.
+(speaker ?) Um, and, and so I think it makes sense to focus on that first and then like, yeah, allowing other people to like add their own, um, and agents and customize it.
+(speaker ?) It was probably like more.
+(speaker ?) Yeah, for, for the sake of, for the sake of clarity.
+(speaker ?) Uh,
+(speaker ?) I'm not sure if I think I would call your token implementations something other than age.
+(speaker ?) Um,
+(speaker ?) just as it will, um, it's like, uh, we had the same problem with commune.
+(speaker ?) Everything was called the module, like really fucked everything up for a while.
+(speaker ?) So, um, what do you, what do you suggest?
+(speaker ?) Oh, I don't.
+(speaker ?) I'm not, uh, something, something like agentic, like, or like, um,
+(speaker ?) like,
+(speaker ?) token core or something. Um, something that like.
+(speaker ?) Doesn't make it so that it's just a token, but like, um,
+(speaker ?) it'll tells you that it's an agent, but like.
+(speaker ?) This is the token implementation of that agent.
+(speaker ?) I don't know what that looks like.
+(speaker ?) Um, I'll get a transcript of this and then ask the guy.
+(speaker ?) Or actually AI give me an expert ad in your response.
+(speaker ?) Um, a, uh, a suggestion or list of suggestions for.
+(speaker ?) But, but I think in the kind of like feature iteration, like after you've got your,
+(speaker ?) your drop down here and you like select a laser and you press launch, launch agent and.
+(speaker ?) You know, you've got, you've got a laser.
+(speaker ?) And you know, you literally like click that and bang your agent is deployed on, on base, including like your doctorate, dockerized.
+(speaker ?) Um, a laser. Yeah. So where you run into the issue is just like, like, where does that, where does that live? Like, um, if you want a stick.
+(speaker ?) Couldn't you just run that on, on a cash?
+(speaker ?) Uh, no, it's, um, like you're talking about like running it on the edge.
+(speaker ?) Like, um, uh, effectively like not on a dedicated server, but on like sort of like, um, a loose state memory that's running on, um, like on chain or something like that.
+(speaker ?) Uh, it's, it's too, it's too complete. Compute.
+(speaker ?) Yeah.
+(speaker ?) It's too computationally expensive.
+(speaker ?) Um, the whole reason for building these frameworks is offload the.
+(speaker ?) Um, alternative load from the models to be able to allow them to break their things and manageable steps so they can only focus on.
+(speaker ?) That whole withdrawal, you need to put it somewhere. And if you try to put it on chain, it's going to be very expensive, especially gas.
+(speaker ?) Um, if you put it on a dedicated server, you just got to manage like, okay, how many people can, how many of these can I build? Like, how much.
+(speaker ?) Gram is going to take? Like, how many, what's my compute limit? Like, there's a few different sort of things to think about.
+(speaker ?) Um, if you want to offer it as like a service where you like.
+(speaker ?) Rent a thing from fucking like digital ocean and rent a basic server and then just spin it up and then fire that Docker container off and then they pay for it.
+(speaker ?) And you just collect the middleman fee, then that's pretty fucking cool business model.
+(speaker ?) Yeah.
+(speaker ?) I think that would make a lot of sense. Basically.
+(speaker ?) Anyway, we just, we just went out the centralize way and then, and then, you know, basically charged charge them. Like, yeah, so you'd have to have some kind of a fee associated with registering on chain.
+(speaker ?) Yeah. And we've got, we've got an entity that's just being set up right now in, uh, in Panama.
+(speaker ?) Yeah.
+(speaker ?) Um, just the legal records. So.
+(speaker ?) Classic Panama. Love it.
+(speaker ?) Yeah, so like in that instance, if you want to do it that way, then also it's a, it's a, it's Avenue of revenue as well, because you can, you basically just charge them.
+(speaker ?) Uh, like a little bit of a premium on top of it. And then you just make a little bit of money. And then also, um, it'll facilitate you being able to provide better service.
+(speaker ?) Or, um, and an additional tooling and stuff like, cause, um, some people, like.
+(speaker ?) May not want to use open AI or if you like you offer your own inference, like, uh, we have inference that's available. If you wanted to use it from us.
+(speaker ?) That like is comparable. It's not like as good as fucking a one.
+(speaker ?) Um, like it's reasonable. Um, and then for like basic tasks and stuff like that and basic language model stuff.
+(speaker ?) Um, like, then you can offer that as a service as well too. So.
+(speaker ?) Yeah. Yeah.
+(speaker ?) So.
+(speaker ?) Um, like I mentioned, we're going to launch a token for this with one million tokens.
+(speaker ?) Um, which will be the governance token. And we'll also, there will also be like a, a Dow.
+(speaker ?) Um, so the business model is basically every time someone, every time someone trades token, some of that training revenue goes into the Dallas treasury, which will probably then be used to.
+(speaker ?) Very mathematically buyback. The governance token.
+(speaker ?) Um, oh, so then you're going to use that to be able to stabilize, look at the hybrid inflation.
+(speaker ?) Yeah, to bring to basically have protocol and liquidity.
+(speaker ?) Um, also when the token graduates on to any swap out of the LP tokens are retained by the, um, by the del.
+(speaker ?) So which you can then choose it to like sell at a future point if it wants to, or just keep them.
+(speaker ?) Um, so, yeah, I mean, have, have a think about like what, because I want, I want you to also be financially incentivized.
+(speaker ?) So, uh, to like help us.
+(speaker ?) We can give you like, you know, a percentage, right?
+(speaker ?) And the governance tokens, or something. Yeah, like there's like, like developing founder. Yeah.
+(speaker ?) Yeah.
+(speaker ?) Yeah.
+(speaker ?) Okay.
+(speaker ?) Um, let me think about this. I also am working on my own project.
+(speaker ?) Um, it is aligned with what I'm doing. So like, I'm going to implement something along these lines anyway.
+(speaker ?) Um, if I just conform what I'm going to do to conform to your vision for it, then like, hey, I can.
+(speaker ?) Like win win for both of us.
+(speaker ?) Um, yeah.
+(speaker ?) Uh, but I need to talk to my partners and then just double check like where I'm at with, um, the onboarding of the new developer and then I can back and.
+(speaker ?) Plan.
+(speaker ?) Um, and then I'll build out like a roadmap and stuff.
+(speaker ?) Yeah.
+(speaker ?) Cool.
+(speaker ?) And I was thinking like, you know, in the meantime, um.
+(speaker ?) It's probably, I would say, fake it. Oh, you make it.
+(speaker ?) Um, I think, I think we could probably already, you know, get, get a Twitter account set up for this.
+(speaker ?) And like, you know, agent deploy function.
+(speaker ?) Um, I see.
+(speaker ?) Yeah.
+(speaker ?) And like Matt, yeah, even, even if it's like manually creating the, the, like the Eliza instance right now, you want to be able to use Twitter to make an agent.
+(speaker ?) That's fucking.
+(speaker ?) And terrible.
+(speaker ?) Awesome.
+(speaker ?) Yeah.
+(speaker ?) Yeah.
+(speaker ?) Yeah.
+(speaker ?) Yeah.
+(speaker ?) Yeah.
+(speaker ?) Yeah.
+(speaker ?) You had a clanker.
+(speaker ?) No.
+(speaker ?) I haven't.
+(speaker ?) The only one I heard of is, um, what is it?
+(speaker ?) So, you, you know, are you on the carcaster?
+(speaker ?) No, I'm not.
+(speaker ?) Um, well, basically.
+(speaker ?) And so yeah, you can, you can like just tag this clanker account and it will like spin up with any, any, any main coin for you. You just tell it like what symbol you want and what supply and then it's been.
+(speaker ?) Turns it up for you.
+(speaker ?) It's an abstraction and people are doing the same thing on, on Twitter.
+(speaker ?) Yeah.
+(speaker ?) So you want to do that for agents.
+(speaker ?) Someone's building this already.
+(speaker ?) I saw it.
+(speaker ?) Oh, yeah.
+(speaker ?) There's fucking a bunch of people building this.
+(speaker ?) Like this is, um.
+(speaker ?) Like.
+(speaker ?) Yeah, the, the, if you want to be like ahead of the game of people, like.
+(speaker ?) I don't know, it's probably like another three or four more steps ahead.
+(speaker ?) I'm trying.
+(speaker ?) I've been trying my best to get to the bleeding, bleeding edge of, um, AI development for the last like two and a half years.
+(speaker ?) Not close, but my ever like right on the edge of it.
+(speaker ?) Yeah.
+(speaker ?) Yeah, it's really hard to keep up with.
+(speaker ?) It's fucking insane that there's like dedicated groups of researchers with hundreds of billions of dollars and infinite fucking compute.
+(speaker ?) It's like, how am I going to catch up to that?
+(speaker ?) All right, man.
+(speaker ?) Well, let's keep in touch.
+(speaker ?) Yeah.
+(speaker ?) Okay.
+(speaker ?) Oh, I got a meeting tomorrow morning and then I'll, um, I'll get back to you and we'll go from there.
+(speaker ?) And if you can't like figure out a way to.
+(speaker ?) Like how we actually use this EPM plugin thing.
+(speaker ?) Yeah, that's, that's basically just going to be an implementation.
+(speaker ?) I can get that working relatively.
+(speaker ?) Probably by the end of the week, I guess.
+(speaker ?) Uh, you can see.
+(speaker ?) I can probably just add.
+(speaker ?) I guess you don't have access to smart contracts.
+(speaker ?) Uh,
+(speaker ?) it will depends on which, if I can interact with them on chain, I should be.
+(speaker ?) Like I just have to have the right RPC.
+(speaker ?) I should be able to interact with it.
+(speaker ?) Well, these are.
+(speaker ?) Just copy and paste these to you.
+(speaker ?) If they're on chain, then they're public.
+(speaker ?) I won.
+(speaker ?) I won.
+(speaker ?) I won.
+(speaker ?) Yeah.
+(speaker ?) Okay.
+(speaker ?) I know how to get on.
+(speaker ?) Um, so like if you wanted to implement, like, deploy a new token, you would use this.
+(speaker ?) Uh, sorry, this one.
+(speaker ?) The bag factory implementation address.
+(speaker ?) Um,
+(speaker ?) This is the nickname bag.
+(speaker ?) Yeah, based as a.
+(speaker ?) Um, and then yeah, like you could click on the right contract and then you can see, like, deploy token crater.
+(speaker ?) There's a platform refer, like your front end provider.
+(speaker ?) I didn't realize that they had a front end that showed you the answer school.
+(speaker ?) Um, then, um,
+(speaker ?) But yeah, that's how you deploy a contract right now.
+(speaker ?) Um,
+(speaker ?) I guess we have to somehow like using using a laser, like, interact with this.
+(speaker ?) Yeah.
+(speaker ?) So, yeah, basically you send a request to the chain to interact with the.
+(speaker ?) Um,
+(speaker ?) And that's through the RPC.
+(speaker ?) So I'll just need to figure out what the Sepula RPC is, create a provider for it, and then.
+(speaker ?) I'll just implement a function that does it.
+(speaker ?) And then.
+(speaker ?) The agent will also need a.
+(speaker ?) Um.
+(speaker ?) Like it's own, it's own wallet.
+(speaker ?) Yeah, so for that you should use safe wallet.
+(speaker ?) Uh, it's a.
+(speaker ?) Um, ulti signatory wallet that has a robust API.
+(speaker ?) Yeah, so that that's great.
+(speaker ?) Like, I really wanted to use laces safe ones.
+(speaker ?) Um, the thing that sucks is gnosis.
+(speaker ?) Fuck.
+(speaker ?) Is what?
+(speaker ?) No, this is slow as fuck.
+(speaker ?) Like the change.
+(speaker ?) Like you do bridge money over there.
+(speaker ?) It's like half an hour.
+(speaker ?) You know, wait, like.
+(speaker ?) I've actually never used nicest chain.
+(speaker ?) It's slow.
+(speaker ?) It's you don't want to implement anything that is like long term on it.
+(speaker ?) But the safe transactions are quick, but, um, yeah, like bridging.
+(speaker ?) But the same is deployed on on.
+(speaker ?) Yeah, they have implementation.
+(speaker ?) Um, so.
+(speaker ?) But that, that obviously is a multi sick setup and.
+(speaker ?) Yeah.
+(speaker ?) So that's a cool.
+(speaker ?) It's an easy.
+(speaker ?) And you can also access it.
+(speaker ?) Well, without like having to ask something like it basically uses like child.
+(speaker ?) Or like pairs of key.
+(speaker ?) Um, do you think it gives you a lot of flexibility in terms of what you.
+(speaker ?) Um, with the agent, um, because eventually you're going to wind up having, um, as the, the framework gets more and more developed, you're going to have more and more plugins that are going to want to do more and more stuff on chain with the vaccine.
+(speaker ?) Having the multi sick is very useful.
+(speaker ?) The idea set up for me, though, would be that the token holders of the agent.
+(speaker ?) Control the agents funds.
+(speaker ?) So remember that every time an agent, someone trades an agent token.
+(speaker ?) Part of the, the commission is shared back with the, with the.
+(speaker ?) Um, I say agent developer, but what I, what I really should be in my opinion is the.
+(speaker ?) Like the, the dial of that agent.
+(speaker ?) Um, and the thing with the, with, with safe multi six is if you want to implement that structure as far as I know the only way to do that is to use zodiac.
+(speaker ?) Um, like the zodiac modules and, and then they're not really with those.
+(speaker ?) So it's zodiac uses.
+(speaker ?) Um, fuma, you know, who my protocol.
+(speaker ?) Yeah.
+(speaker ?) So it uses a user's like, um, yeah, but basically, um, is your dispute resolution system and then.
+(speaker ?) So you still have like centralized, you know, multi sick signers.
+(speaker ?) Um, but you can somehow like give control to token holders.
+(speaker ?) Yeah, so they're probably, it's probably, it's probably creating like derivative keys.
+(speaker ?) Um, so then you can use it as like a child key.
+(speaker ?) Um, so they can still implement and like access the funds, but they don't have like the, that like is this thing of it.
+(speaker ?) Right.
+(speaker ?) Right.
+(speaker ?) Right.
+(speaker ?) So I think like it's probably better to just use like from, from the get go to have a, because in our token, we're just in process now adding.
+(speaker ?) Yeah.
+(speaker ?) One, like your own entire wallet implementing is like that.
+(speaker ?) Like in that, in that case, then I would just probably just build an entire front end for it.
+(speaker ?) Or like expand the front end that you have right now.
+(speaker ?) Yeah.
+(speaker ?) Yeah.
+(speaker 1) Yeah.
+(speaker ?) Yeah, exactly.
+(speaker ?) Okay. Well, I mean, if I, if I use something like Aragon, and that framework or or, or, or tally and like the open depth and governor contract, which is, I think, more.
+(speaker ?) Um, then you, you can just like interact with the agent down through, through, through tally. Are you familiar with tally?
+(speaker ?) No, I'm, I, like I said, I'm very substrate.
+(speaker ?) And then also, um, are you planning on having the dows implemented in the agents initiative? I guess it doesn't sound like you're doing it initially, but like you want them ideally all be dows.
+(speaker ?) So effectively, they would have like some kind of a centralized governing that the owner of the tokens would.
+(speaker ?) Or the voting chairs of it. Yes. Exactly. Like that. All basically be that does from, from the get go. Like, it seems you deployed the agent is basically a dowel controlled by its token holders.
+(speaker ?) Makes sense. Okay.
+(speaker ?) So effectively, then the dowel is just like, um, the ledger for.
+(speaker ?) Oh, it's right.
+(speaker ?) And then with some kind of government.
+(speaker ?) Next one. Exactly. Okay.
+(speaker ?) That's a simple to deploy it, like the dowel on here, like, as long as you've got your governor contract and installed, and you've got your token contract.
+(speaker ?) Um, okay. So then you just like implement. Do you do these guys charge at all? Um, or are they just like, it's free.
+(speaker ?) I'm like trying to figure out where their enterprise plan is for IPFS because I'm like, oh, they just don't charge them. Like, that's fucking crazy.
+(speaker ?) Um, if, if somebody uses, like, create a, um, a governance proposal through unlike the data voting through the tally interface, then I believe, at least for proposals that have, like,
+(speaker ?) like a financial value attached to them, then they take a percentage.
+(speaker ?) Oh, okay. So they live off of the gas fees.
+(speaker ?) Yeah.
+(speaker ?) Cool. Um, but if you, if you use something like Aragon, you know, that, that's basically, that's basically free.
+(speaker ?) Oh, okay. Cool.
+(speaker ?) I don't need too many shinies, man. My, my partner's going to be mad at me when I'm sorry, sorry.
+(speaker ?) Just like, I have like a really hard time. Not really hard time, but like, I like to look at a lot of different things and I get distracted. Um, so trying to make sure that.
+(speaker ?) All right. Well, I'll stop doing things. Yeah. Okay. Cool. Um, all right. I think I got enough information from you. I'll make a.
+(speaker ?) A summarized.
+(speaker ?) A meeting notes of it.
+(speaker ?) Cool. Awesome.
+(speaker ?) All right.
+(speaker ?) Thank you. Bye.
+(speaker ?) You.
+(speaker ?) You.
+(speaker ?) You.
+(speaker ?) You.
+(speaker ?) You.
+(speaker ?) You.
+(speaker ?) You.
+(speaker ?) You.
+(speaker ?) You.
+(speaker ?) You.

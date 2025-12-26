@@ -1,0 +1,26 @@
+services:
+  speech2text:
+    build: .
+    ports: 
+      - 7098:7098
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    command:
+      - python3
+      - api.py
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+              count: 1
+    runtime: nvidia  # Use the NVIDIA runtime for GPU support
+    ipc: host  # Equivalent to --ipc=host
+    ulimits:  # Set ulimit options
+      memlock: -1
+      stack: 67108864

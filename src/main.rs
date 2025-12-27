@@ -2,7 +2,7 @@ use std::net::SocketAddr;
 use std::sync::Arc;
 
 use axum::{
-    extract::State,
+    extract::{DefaultBodyLimit, State},
     http::StatusCode,
     response::IntoResponse,
     routing::{get, post},
@@ -27,7 +27,9 @@ struct AppState {
 
 #[derive(Deserialize)]
 struct SttRequest {
-    audio_url: String,
+    audio: Option<String>,
+    audio_url: Option<String>,
+    filename: Option<String>,
 }
 
 #[derive(Serialize)]
@@ -62,7 +64,22 @@ async fn transcribe(
     Json(req): Json<SttRequest>,
 ) -> impl IntoResponse {
     let url = format!("{}/transcribe", state.config.backend_url);
-    let payload = serde_json::json!({ "audio_url": req.audio_url });
+
+    // Prefer inline audio payload; fall back to URL if provided
+    let payload = if let Some(audio) = req.audio {
+        serde_json::json!({
+            "audio": audio,
+            "filename": req.filename.unwrap_or_else(|| "input.wav".to_string()),
+        })
+    } else if let Some(audio_url) = req.audio_url {
+        serde_json::json!({ "audio_url": audio_url })
+    } else {
+        return (
+            StatusCode::BAD_REQUEST,
+            "missing 'audio' (base64) or 'audio_url'".to_string(),
+        );
+    };
+
     match state.client.post(&url).json(&payload).send().await {
         Ok(resp) => {
             let status = resp.status();
@@ -126,6 +143,8 @@ async fn main() {
         .route("/ready", get(ready))
         .route("/warm", post(warm))
         .route("/transcribe", post(transcribe))
+        // Allow large audio payloads
+        .layer(DefaultBodyLimit::max(50 * 1024 * 1024))
         .layer(CorsLayer::permissive())
         .with_state(state.clone());
 

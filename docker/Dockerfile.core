@@ -9,13 +9,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  build-essential pkg-config \
  cmake ninja-build \
  python3.12-venv python3.12-dev \
- cargo \
  && rm -rf /var/lib/apt/lists/*
 
-ENV PATH="/root/.cargo/bin:${PATH}"
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable \
- && . "$HOME/.cargo/env" \
- && rustup default stable
+# System-wide rustup/cargo (accessible to non-root user)
+ENV RUSTUP_HOME=/usr/local/rustup \
+    CARGO_HOME=/usr/local/cargo \
+    PATH=/usr/local/cargo/bin:${PATH}
+
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+    | sh -s -- -y --default-toolchain stable --profile minimal --no-modify-path \
+ && rustup default stable \
+ && chown -R ${UID}:${GID} /usr/local/rustup /usr/local/cargo \
+ && cargo --version
 
 RUN pip install --no-cache-dir uv
 

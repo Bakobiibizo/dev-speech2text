@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  build-essential pkg-config \
  cmake ninja-build \
  python3.12-venv python3.12-dev \
+ ffmpeg \
  && rm -rf /var/lib/apt/lists/*
 
 # System-wide rustup/cargo (accessible to non-root user)
@@ -29,6 +30,23 @@ RUN pip install --no-cache-dir -r /tmp/backend-requirements.txt
 
 RUN pip uninstall -y pynvml || true \
 && pip install --no-cache-dir nvidia-ml-py
+
+# Prebuild Rust proxy to avoid runtime compilation delays
+COPY Cargo.toml Cargo.lock /tmp/dev-speech2text/
+COPY src /tmp/dev-speech2text/src
+RUN cd /tmp/dev-speech2text \
+ && cargo build --release --bin dev-speech2text \
+ && cp /tmp/dev-speech2text/target/release/dev-speech2text /usr/local/bin/dev-speech2text
+
+# Build whisper.cpp for current arch and place binary/model outside bind mount
+RUN git clone --depth=1 https://github.com/ggerganov/whisper.cpp.git /tmp/whisper.cpp \
+ && cd /tmp/whisper.cpp \
+ && make -j"$(nproc)" \
+ && bash models/download-ggml-model.sh base.en \
+ && mkdir -p /opt/whisper \
+ && mv /tmp/whisper.cpp/build/bin/main /opt/whisper/main \
+ && mv /tmp/whisper.cpp/models/ggml-base.en.bin /opt/whisper/ggml-base.en.bin \
+ && chmod +x /opt/whisper/main
 
 RUN pip install --no-cache-dir --no-deps --upgrade setuptools wheel \
 && pip install --no-cache-dir --no-deps --no-build-isolation "git+https://github.com/pytorch/audio@release/2.9" \

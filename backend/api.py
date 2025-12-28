@@ -6,6 +6,7 @@ Uses whisper.cpp for transcription.
 
 import base64
 import os
+import shutil
 import subprocess
 import tempfile
 from pathlib import Path
@@ -70,15 +71,29 @@ def transcribe(request: TranscribeRequest) -> TranscribeResponse:
         # Run whisper
         main_binary = WHISPER_DIR / "main"
         model_path = WHISPER_DIR / WHISPER_MODEL
-        
+
+        threads = min(WHISPER_THREADS, max(os.cpu_count() or 1, 1))
+
         whisper_cmd = [
             str(main_binary),
             "-m", str(model_path),
             "-f", str(wav_path),
-            "-t", str(WHISPER_THREADS),
-            "-otxt"
+            "-t", str(threads),
+            "-otxt",
         ]
-        subprocess.run(whisper_cmd, check=True, capture_output=True, cwd=str(tmpdir), timeout=600)
+        try:
+            subprocess.run(
+                whisper_cmd,
+                check=True,
+                capture_output=True,
+                cwd=str(tmpdir),
+                timeout=600,
+            )
+        except subprocess.CalledProcessError as e:
+            err = e.stderr.decode("utf-8", errors="ignore") if e.stderr else ""
+            out = e.stdout.decode("utf-8", errors="ignore") if e.stdout else ""
+            # Surface detailed error for debugging
+            return TranscribeResponse(text=f"[whisper error] {e} stdout: {out[:500]} stderr: {err[:500]}")
         
         # Read output
         txt_path = Path(str(wav_path) + ".txt")

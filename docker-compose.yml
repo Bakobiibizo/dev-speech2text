@@ -44,7 +44,8 @@ services:
           devices:
             - capabilities: [gpu]
     user: "${UID:-1000}:${GID:-1000}"
-    command: ["bash", "-lc", "cargo run --bin dev-speech2text"]
+    # Use prebuilt binary to avoid runtime cargo build permission issues
+    command: ["/usr/local/bin/dev-speech2text"]
 
 volumes:
   models:

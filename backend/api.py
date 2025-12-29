@@ -27,9 +27,12 @@ app.add_middleware(
 )
 
 # Configuration
-WHISPER_DIR = Path(os.getenv("WHISPER_DIR", "/app/backend"))
+# Prefer explicit env; default to repo mount (/workspace/backend) then legacy /opt/whisper.
+WHISPER_DIR_PRIMARY = Path(os.getenv("WHISPER_DIR", "/workspace/backend"))
+WHISPER_DIR_FALLBACK = Path("/opt/whisper")
 WHISPER_MODEL = os.getenv("WHISPER_MODEL", "ggml-base.en.bin")
 WHISPER_THREADS = int(os.getenv("WHISPER_THREADS", "32"))
+WHISPER_DEFAULT_LANG = os.getenv("WHISPER_LANG", "en")
 
 
 class TranscribeRequest(BaseModel):
@@ -69,8 +72,29 @@ def transcribe(request: TranscribeRequest) -> TranscribeResponse:
         subprocess.run(convert_cmd, check=True, capture_output=True, timeout=300)
         
         # Run whisper
-        main_binary = WHISPER_DIR / "main"
-        model_path = WHISPER_DIR / WHISPER_MODEL
+        # Resolve whisper binary and model by probing locations
+        candidate_dirs = [WHISPER_DIR_PRIMARY, WHISPER_DIR_FALLBACK]
+        main_binary = None
+        model_path = None
+
+        for d in candidate_dirs:
+            if (d / "whisper-cli").exists():
+                main_binary = d / "whisper-cli"
+                break
+        if main_binary is None:
+            for d in candidate_dirs:
+                if (d / "main").exists():
+                    main_binary = d / "main"
+                    break
+        if main_binary is None:
+            return TranscribeResponse(text="[whisper error] whisper binary not found (whisper-cli or main)")
+
+        for d in candidate_dirs:
+            if (d / WHISPER_MODEL).exists():
+                model_path = d / WHISPER_MODEL
+                break
+        if model_path is None:
+            return TranscribeResponse(text=f"[whisper error] model not found: {WHISPER_MODEL}")
 
         threads = min(WHISPER_THREADS, max(os.cpu_count() or 1, 1))
 
@@ -80,6 +104,8 @@ def transcribe(request: TranscribeRequest) -> TranscribeResponse:
             "-f", str(wav_path),
             "-t", str(threads),
             "-otxt",
+            "-l", WHISPER_DEFAULT_LANG,
+            "-ng",  # force CPU to avoid GPU/driver issues
         ]
         try:
             subprocess.run(

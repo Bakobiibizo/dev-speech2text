@@ -30,7 +30,7 @@ bash models/download-ggml-model.sh base.en
 cd .. 
 mkdir -p in out
 
-mv whisper.cpp/main .
+mv whisper.cpp/build/bin/whisper-cli .
 mv whisper.cpp/models/ggml-base.en.bin .
 mv whisper.cpp/samples/jfk.wav in
 

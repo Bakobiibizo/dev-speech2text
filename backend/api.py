@@ -6,7 +6,6 @@ Uses whisper.cpp for transcription.
 
 import base64
 import os
-import shutil
 import subprocess
 import tempfile
 from pathlib import Path
@@ -29,7 +28,6 @@ app.add_middleware(
 # Configuration
 # Prefer explicit env; default to repo mount (/workspace/backend) then legacy /opt/whisper.
 WHISPER_DIR_PRIMARY = Path(os.getenv("WHISPER_DIR", "/workspace/backend"))
-WHISPER_DIR_FALLBACK = Path("/opt/whisper")
 WHISPER_MODEL = os.getenv("WHISPER_MODEL", "ggml-base.en.bin")
 WHISPER_THREADS = int(os.getenv("WHISPER_THREADS", "32"))
 WHISPER_DEFAULT_LANG = os.getenv("WHISPER_LANG", "en")
@@ -71,30 +69,14 @@ def transcribe(request: TranscribeRequest) -> TranscribeResponse:
         ]
         subprocess.run(convert_cmd, check=True, capture_output=True, timeout=300)
         
-        # Run whisper
-        # Resolve whisper binary and model by probing locations
-        candidate_dirs = [WHISPER_DIR_PRIMARY, WHISPER_DIR_FALLBACK]
-        main_binary = None
-        model_path = None
+        # Run whisper – require explicit whisper-cli in WHISPER_DIR_PRIMARY; no fallback
+        main_binary = WHISPER_DIR_PRIMARY / "whisper-cli"
+        if not main_binary.exists():
+            return TranscribeResponse(text="[whisper error] whisper-cli not found in WHISPER_DIR")
 
-        for d in candidate_dirs:
-            if (d / "whisper-cli").exists():
-                main_binary = d / "whisper-cli"
-                break
-        if main_binary is None:
-            for d in candidate_dirs:
-                if (d / "main").exists():
-                    main_binary = d / "main"
-                    break
-        if main_binary is None:
-            return TranscribeResponse(text="[whisper error] whisper binary not found (whisper-cli or main)")
-
-        for d in candidate_dirs:
-            if (d / WHISPER_MODEL).exists():
-                model_path = d / WHISPER_MODEL
-                break
-        if model_path is None:
-            return TranscribeResponse(text=f"[whisper error] model not found: {WHISPER_MODEL}")
+        model_path = WHISPER_DIR_PRIMARY / WHISPER_MODEL
+        if not model_path.exists():
+            return TranscribeResponse(text=f"[whisper error] model not found: {model_path}")
 
         threads = min(WHISPER_THREADS, max(os.cpu_count() or 1, 1))
 

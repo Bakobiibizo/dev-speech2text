@@ -37,7 +37,7 @@ services:
       - BACKEND_WORKDIR=/workspace/backend
       - BACKEND_PORT=${BACKEND_PORT:-7100}
       - BACKEND_HEALTH_PATH=/health
-      - WHISPER_DIR=/opt/whisper
+      - WHISPER_DIR=/workspace/backend
     deploy:
       resources:
         reservations:
